@@ -16,7 +16,7 @@
       </nav>
       <div class="card">
         <h1>Privacy Policy</h1>
-        <p class="muted">Last updated: November 1, 2026</p>
+        <p class="muted">Last updated: November 3, 2026</p>
         <p>
           Ledgerly ("the app") is built and maintained by Rodney Decena ("I",
           "me"). This policy explains what the app does with your information.
@@ -26,11 +26,48 @@
         <p>
           Everything you enter in Ledgerly, such as accounts, balances,
           expenses, bills, debts, categories and settings, is saved in a
-          database on your phone. The app has no cloud database and does not
-          send this data to me or to anyone else. Each signed-in account has its
-          own separate database on the device, so another account on the same
-          phone cannot see it.
+          database on your phone. On the free plan the app does not send this
+          data to me or to anyone else. Each signed-in account has its own
+          separate database on the device, so another account on the same phone
+          cannot see it.
         </p>
+
+        <h2>Premium cloud backup (Android)</h2>
+        <p>
+          If you buy Premium on Android, the app also keeps one backup copy of
+          your data in the cloud, so you can restore it on a new phone or after
+          reinstalling. Without Premium nothing is uploaded.
+        </p>
+        <ul>
+          <li>
+            <strong>What is sent:</strong> a single compressed file containing
+            what you entered in the app (accounts, balances, expenses, bills,
+            debts, categories and settings). It is sent when you leave the app
+            or open it, at most about once an hour, and only if something
+            changed.
+          </li>
+          <li>
+            <strong>Where it is kept:</strong> in Google Cloud Storage
+            (Firebase), a service provided by Google, in a folder that belongs
+            to your account. Security rules allow only you, signed in with your
+            Google account and with a verified Premium purchase, to read or
+            write it. It is encrypted in transit and Google encrypts it at rest.
+            As the person who runs the Firebase project I technically have
+            administrative access to the storage; I do not look at or use your
+            backups, and I do not sell or share them.
+          </li>
+          <li>
+            <strong>How Premium is checked:</strong> the app sends your Google
+            Play purchase token and your account identifier to a small function
+            I run on Google Cloud. It asks Google Play whether the purchase is
+            real and made by your account, and marks your sign-in as Premium
+            for a limited time. It does not receive your payment details.
+          </li>
+          <li>
+            <strong>Restoring:</strong> you restore manually from Settings.
+            Restoring replaces the data on that phone with the backup.
+          </li>
+        </ul>
 
         <h2>Signing in with Google (Android)</h2>
         <p>
@@ -39,8 +76,9 @@
           you sign in, Google and Firebase process your Google account
           identifier, email address, display name and basic technical data such
           as IP address and device information, in order to verify who you are.
-          The app uses your account identifier only to name and separate your
-          local database, and shows your email on the Settings screen. I do not
+          The app uses your account identifier to name and separate your local
+          database, to locate your cloud backup if you have Premium, and shows
+          your email on the Settings screen. I do not
           use this information for advertising and do not sell it.
         </p>
         <p>
@@ -80,17 +118,21 @@
 
         <h2>Backups and deleting your data</h2>
         <p>
-          Your data lives only on your device. If you uninstall the app or clear
-          its storage, the data is deleted and I cannot recover it. Depending on
-          your phone settings, Android's system backup may include app data in
-          your own Google backup; that is controlled by you and Google, not by
-          me.
+          On the free plan your data lives only on your device. If you uninstall
+          the app or clear its storage, the data is deleted and I cannot recover
+          it. With Premium, you can restore it from your cloud backup (see
+          above). Depending on your phone settings, Android's system backup may
+          also include app data in your own Google backup; that is controlled by
+          you and Google, not by me.
         </p>
         <p>
-          You can delete your account, which removes your sign-in record from
-          Firebase Authentication and erases your data on the phone, from
-          Settings in the app. Steps, and an email option, are on the
-          <a href="delete-account.html">Delete Account</a> page.
+          You can delete your account from Settings in the app. This removes
+          your sign-in record from Firebase Authentication, deletes your cloud
+          backup if you have one, and erases your data on the phone. Steps, and
+          an email option, are on the
+          <a href="delete-account.html">Delete Account</a> page. Copies of a
+          deleted backup may remain in Google's systems for a short period
+          before they are removed.
         </p>
 
         <h2>Children</h2>
@@ -101,8 +143,9 @@
 
         <h2>Changes</h2>
         <p>
-          If this policy changes, I will update the date above. If the app later
-          adds cloud sync, this policy will be updated before it does.
+          If this policy changes, I will update the date above. The app does
+          not sync data between devices; the Premium cloud backup is a single
+          copy that you restore manually.
         </p>
 
         <h2>Contact</h2>
